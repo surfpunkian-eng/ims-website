@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IMS — Integrated Marketing Solutions</title>
+<script>if(sessionStorage.getItem("ims_auth")!=="ok"){window.location.replace("/auth.html")}</script>
 <meta name="description" content="IMS helps organisations turn data into impact. Data, technology, and customer experience specialists.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -26,7 +27,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);displ
 .nav-name span{display:block;font-weight:300;font-size:10px;letter-spacing:.15em;color:rgba(255,255,255,.4);text-transform:uppercase}
 .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
 .nav-links a{font-size:12px;font-weight:400;letter-spacing:.06em;color:rgba(255,255,255,.6);text-decoration:none;text-transform:uppercase;transition:color .2s}
-.nav-links a:hover{color:var(--orange)}
+.nav-links a:hover{color:var(--sky)}
 .nav-cta{background:var(--orange)!important;color:var(--white)!important;padding:8px 20px!important;font-weight:500!important}
 .nav-cta:hover{background:#c45e28!important}
 
@@ -35,7 +36,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);displ
 .hero::before{content:\'\';position:absolute;inset:0;background:linear-gradient(135deg,#0a1a2e 0%,#0E2841 40%,#156082 100%);opacity:.95}
 .hero::after{content:\'\';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--orange)}
 .hero-inner{position:relative;z-index:2;max-width:780px}
-.eyebrow{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--sky);margin-bottom:20px;display:flex;align-items:center;gap:12px}
 .eyebrow::before{content:\'\';width:24px;height:1px;background:var(--orange)}
 .hero h1{font-family:var(--serif);font-size:clamp(36px,5.5vw,68px);font-weight:400;line-height:1.1;color:var(--white);margin-bottom:24px}
 .hero h1 em{font-style:italic;color:#5BC8F0}
@@ -58,7 +59,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);displ
 
 /* SHARED SECTION STYLES */
 section{padding:80px 8%}
-.section-tag{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section-tag{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sky);margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .section-tag::before{content:\'\';width:20px;height:1px;background:var(--orange)}
 h2.sh{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:400;line-height:1.2;color:var(--navy);margin-bottom:16px}
 h2.sh em{font-style:italic;color:var(--blue)}
@@ -116,7 +117,7 @@ h2.sh.light em{color:#5BC8F0}
 .approach-grid{display:flex;flex-direction:column;gap:0}
 .approach-item{padding:20px 0;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start}
 .approach-item:last-child{border-bottom:none}
-.approach-dot{width:8px;height:8px;background:var(--orange);flex-shrink:0;margin-top:7px}
+.approach-dot{width:8px;height:8px;background:var(--sky);flex-shrink:0;margin-top:7px}
 .approach-title{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px}
 .approach-body{font-size:13px;font-weight:300;color:var(--muted);line-height:1.6}
 
@@ -190,7 +191,34 @@ footer{background:var(--navy);padding:40px 8%;border-top:2px solid var(--orange)
 
 <!-- AEM BLOCK: hero /blocks/hero/hero.js -->
 <section class="hero">
-  <div class="hero-inner reveal">
+  
+  <!-- VIDEO PLACEHOLDER — AEM BLOCK: video /blocks/video/video.js -->
+  <!-- Uncomment video or iframe below when asset is ready -->
+  <!-- VIDEO PLACEHOLDER — visible until real asset supplied -->
+  <div id="hero-video" style="position:absolute;top:0;right:0;bottom:0;width:42%;z-index:1;overflow:hidden;pointer-events:none;display:block">
+    <!--
+    <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover">
+      <source src="/assets/ims-reel.mp4" type="video/mp4">
+    </video>
+    <iframe src="https://player.vimeo.com/video/YOUR_ID?autoplay=1&muted=1&loop=1&background=1"
+      frameborder="0" allow="autoplay" style="width:100%;height:100%"></iframe>
+    -->
+    <div style="width:100%;height:100%;background:#000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;border-left:1px dashed rgba(255,255,255,.15)">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="rgba(255,255,255,0.5)" stroke="none"/></svg>
+      <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);font-family:monospace">HERO VIDEO / REEL</span>
+      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:monospace">1920 × 1080 · MP4 or Vimeo</span>
+    </div>
+  </div>
+  <style>#hero-video{display:block!important} @media(min-width:960px){.hero-inner{max-width:52%}} @media(max-width:959px){#hero-video{position:relative!important;width:100%!important;height:220px!important;top:auto!important;right:auto!important;bottom:auto!important;order:-1}}</style>
+<div class="hero-inner reveal">
+    <!-- LOGO PLACEHOLDER — replace with confirmed SVG brand mark from John Harfield -->
+    <div style="margin-bottom:28px;display:inline-flex;align-items:center;gap:14px">
+      <div style="width:60px;height:60px;background:#E97132;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:#fff;letter-spacing:.05em;flex-shrink:0">IMS</div>
+      <div style="border-left:1px solid rgba(255,255,255,.12);padding-left:14px">
+        <div style="font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:monospace">LOGO PLACEHOLDER</div>
+        <div style="font-size:9px;letter-spacing:.1em;font-family:monospace;color:rgba(255,255,255,.18);margin-top:3px">Replace with SVG brand mark · John Harfield</div>
+      </div>
+    </div>
     <p class="eyebrow">Integrated Marketing Solutions</p>
     <h1>Data-driven insight.<br><em>Measurable impact.</em></h1>
     <p class="hero-sub">We help organisations turn complex data into clear decisions — combining data strategy, marketing technology, and customer experience to drive better outcomes across the full customer lifecycle.</p>
@@ -224,7 +252,7 @@ footer{background:var(--navy);padding:40px 8%;border-top:2px solid var(--orange)
 </div>
 
 <!-- AEM BLOCK: columns /blocks/columns/columns.js — capabilities -->
-<section id="capabilities">
+<section id="capabilities" style="background:var(--grey)">
   <p class="section-tag">Capabilities</p>
   <h2 class="sh">Specialist expertise across<br><em>data, technology, and experience.</em></h2>
   <p class="section-intro">Our capabilities span the full spectrum of data-driven marketing — from analytics and insight through to platform implementation and AI-assisted operations. We combine specialist expertise with practical delivery.</p>
@@ -483,7 +511,7 @@ footer{background:var(--navy);padding:40px 8%;border-top:2px solid var(--orange)
     <h2>Ready to turn your data<br>into measurable impact?</h2>
     <p>Talk to us about what data-driven transformation looks like for your organisation.</p>
   </div>
-  <a href="mailto:hello@itmakessense.ai" class="btn-white">Get in touch</a>
+  <a href="/cdn-cgi/l/email-protection#89e1ece5e5e6c9e0fde4e8e2ecfafaece7faeca7e8e0" class="btn-white">Get in touch</a>
 </section>
 
 <!-- AEM BLOCK: footer /blocks/footer/footer.js -->
@@ -492,7 +520,7 @@ footer{background:var(--navy);padding:40px 8%;border-top:2px solid var(--orange)
     <div class="footer-brand">
       <div class="nav-mark">IMS</div>
       <div class="footer-tagline">Integrated Marketing Solutions. Data, technology, and customer experience specialists.</div>
-      <div style="margin-top:12px;font-size:10px;color:rgba(255,255,255,.25);letter-spacing:.08em">hello@itmakessense.ai</div>
+      <div style="margin-top:12px;font-size:10px;color:rgba(255,255,255,.25);letter-spacing:.08em"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80e8e5ececefc0e9f4ede1ebe5f3f3e5eef3e5aee1e9">[email&#160;protected]</a></div>
     </div>
     <div class="footer-col">
       <h4>Capabilities</h4>
@@ -562,11 +590,41 @@ footer{background:var(--navy);padding:40px 8%;border-top:2px solid var(--orange)
   <span>Repo: <a href="https://github.com/surfpunkian-eng/ims-website">surfpunkian-eng/ims-website</a> &middot; Phase 1</span>
 </div>
 
+
 <script>
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);} });
-}, {threshold:0.06});
+},{threshold:0.01,rootMargin:"0px 0px -20px 0px"});
 document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+setTimeout(()=>{document.querySelectorAll(".reveal:not(.visible)").forEach(el=>el.classList.add("visible"));},1200);
 </script>
-</body>
-</html>
+<!-- CONTACT WIDGET -->
+<div id="cw-wrap" style="position:fixed;bottom:24px;right:24px;z-index:500;font-family:Inter,system-ui,sans-serif">
+  <button onclick="cwToggle()" style="width:54px;height:54px;background:#156082;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(14,40,65,.35);transition:transform .15s;padding:0" onmouseenter="this.style.transform='scale(1.1)'" onmouseleave="this.style.transform='scale(1)'">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  <div id="cw-panel" style="display:none;position:absolute;bottom:66px;right:0;width:310px;background:#fff;box-shadow:0 8px 40px rgba(14,40,65,.18);border-top:3px solid #0F9ED5">
+    <div style="background:#0E2841;padding:16px 18px;display:flex;justify-content:space-between;align-items:center">
+      <div><div style="font-size:13px;font-weight:600;color:#fff">Get in touch</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:2px">IMS &#183; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="18707d74747758716c7579737d6b6b7d766b7d367971">[email&#160;protected]</a></div></div>
+      <span onclick="cwToggle()" style="color:rgba(255,255,255,.35);cursor:pointer;font-size:20px;line-height:1;padding:4px">&times;</span>
+    </div>
+    <div style="padding:18px">
+      <div id="cw-form">
+        <div style="margin-bottom:11px"><label style="display:block;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#5A6B7A;margin-bottom:5px">Name</label><input id="cw-n" type="text" placeholder="Your name" style="width:100%;border:1px solid #E8ECF0;padding:8px 11px;font-size:13px;font-family:inherit;outline:none;color:#0E2841" onfocus="this.style.borderColor='#0F9ED5'" onblur="this.style.borderColor='#E8ECF0'"></div>
+        <div style="margin-bottom:11px"><label style="display:block;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#5A6B7A;margin-bottom:5px">Email</label><input id="cw-e" type="email" placeholder="you@email.com" style="width:100%;border:1px solid #E8ECF0;padding:8px 11px;font-size:13px;font-family:inherit;outline:none;color:#0E2841" onfocus="this.style.borderColor='#0F9ED5'" onblur="this.style.borderColor='#E8ECF0'"></div>
+        <div style="margin-bottom:14px"><label style="display:block;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#5A6B7A;margin-bottom:5px">How can we help?</label><textarea id="cw-m" rows="3" placeholder="Tell us about your project..." style="width:100%;border:1px solid #E8ECF0;padding:8px 11px;font-size:13px;font-family:inherit;outline:none;resize:none;color:#0E2841" onfocus="this.style.borderColor='#0F9ED5'" onblur="this.style.borderColor='#E8ECF0'"></textarea></div>
+        <button onclick="cwSubmit()" style="width:100%;background:#0F9ED5;color:#fff;border:none;padding:10px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:inherit" onmouseenter="this.style.background='#0b7fa8'" onmouseleave="this.style.background='#0F9ED5'">Send message</button>
+        <p style="font-size:9px;color:#bbb;text-align:center;margin-top:9px">We will be in touch within one business day.</p>
+      </div>
+      <div id="cw-ty" style="display:none;text-align:center;padding:16px 0">
+        <div style="font-size:28px;margin-bottom:10px;color:#0F9ED5">&#10003;</div>
+        <div style="font-size:13px;font-weight:600;color:#0E2841;margin-bottom:6px">Message received</div>
+        <div style="font-size:12px;color:#5A6B7A;line-height:1.6">We will be in touch shortly.</div>
+      </div>
+    </div>
+    <div style="padding:8px 18px;background:#F4F5F7;border-top:1px solid #E8ECF0"><span style="font-size:9px;color:#bbb">Demo &#183; AEM Forms / Marketo in production</span></div>
+  </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function cwToggle(){var p=document.getElementById("cw-panel");p.style.display=p.style.display==="none"?"block":"none";}
+function cwSubmit(){var n=document.getElementById("cw-n").value,e=document.getElementById("cw-e").value;if(!n||!e){alert("Please add name and email.");return;}document.getElementById("cw-form").style.display="none";document.getElementById("cw-ty").style.display="block";setTimeout(function(){document.getElementById("cw-panel").style.display="no
