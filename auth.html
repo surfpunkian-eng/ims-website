@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMS — Internal Access</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:#0E2841;font-family:'Inter',system-ui,sans-serif}
+body{display:flex;align-items:center;justify-content:center;min-height:100vh}
+.card{background:#132B40;border:1px solid rgba(255,255,255,.08);padding:48px 40px;width:100%;max-width:400px;position:relative}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#E97132}
+.mark{width:40px;height:40px;background:#E97132;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff;letter-spacing:.05em;margin:0 auto 20px}
+h1{font-size:18px;font-weight:600;color:#fff;text-align:center;margin-bottom:8px;letter-spacing:.02em}
+.sub{font-size:12px;color:rgba(255,255,255,.4);text-align:center;margin-bottom:32px;line-height:1.6;letter-spacing:.04em;text-transform:uppercase}
+label{display:block;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:8px}
+input{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#fff;padding:12px 16px;font-size:14px;font-family:inherit;outline:none;transition:border-color .2s;letter-spacing:.08em}
+input:focus{border-color:#E97132}
+input::placeholder{color:rgba(255,255,255,.2)}
+.btn{width:100%;background:#E97132;color:#fff;border:none;padding:13px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;margin-top:16px;font-family:inherit;transition:background .2s}
+.btn:hover{background:#c45e28}
+.err{color:#f08060;font-size:12px;text-align:center;margin-top:12px;display:none;letter-spacing:.04em}
+.notice{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.07);font-size:10px;color:rgba(255,255,255,.2);text-align:center;line-height:1.7;letter-spacing:.04em}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="mark">IMS</div>
+  <h1>Internal Review Access</h1>
+  <p class="sub">Integrated Marketing Solutions · Phase 1 POC</p>
+  <label for="pw">Access password</label>
+  <input type="password" id="pw" placeholder="Enter password" autocomplete="off">
+  <button class="btn" onclick="check()">Continue →</button>
+  <div class="err" id="err">Incorrect password. Please try again.</div>
+  <div class="notice">
+    This site is for internal review only.<br>
+    Private repository · Not publicly indexed · Link access only.<br>
+    IMS · imsolutions.co.uk · itmakessense.ai
+  </div>
+</div>
+<script>
+// Password is set here — change to whatever shared password you want
+const PW = 'itmakessense2026';
+const DEST = '/';
+
+// Check if already authenticated
+if(sessionStorage.getItem('ims_auth') === 'ok') {
+  window.location.replace(DEST);
+}
+
+function check() {
+  const val = document.getElementById('pw').value;
+  if(val === PW) {
+    sessionStorage.setItem('ims_auth', 'ok');
+    window.location.replace(DEST);
+  } else {
+    document.getElementById('err').style.display = 'block';
+    document.getElementById('pw').value = '';
+    document.getElementById('pw').focus();
+  }
+}
+
+document.getElementById('pw').addEventListener('keydown', e => {
+  if(e.key === 'Enter') check();
+});
+</script>
+</body>
+</html>
