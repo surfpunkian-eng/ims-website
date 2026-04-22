@@ -2,7 +2,7 @@
 
 Corporate website for IMS Consultancy, deployed via Vercel.
 
-**Live:** https://ims.surfpunkian.com
+**Live:** https://surfpunkian.com
 **Production (future):** https://ims.ai
 
 ## Editing content
