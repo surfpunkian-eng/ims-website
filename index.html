@@ -195,20 +195,20 @@ footer{background:var(--navy);padding:40px 8%;border-top:2px solid var(--orange)
   <!-- VIDEO PLACEHOLDER — AEM BLOCK: video /blocks/video/video.js -->
   <!-- Uncomment video or iframe below when asset is ready -->
   <!-- VIDEO PLACEHOLDER — visible until real asset supplied -->
-  <div id="hero-video" style="position:absolute;top:0;right:0;bottom:0;width:42%;z-index:1;overflow:hidden;pointer-events:none;display:block">
-    <!--
-    <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover">
-      <source src="/assets/ims-reel.mp4" type="video/mp4">
-    </video>
-    <iframe src="https://player.vimeo.com/video/YOUR_ID?autoplay=1&muted=1&loop=1&background=1"
-      frameborder="0" allow="autoplay" style="width:100%;height:100%"></iframe>
-    -->
-    <div style="width:100%;height:100%;background:#000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;border-left:1px dashed rgba(255,255,255,.15)">
-      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="rgba(255,255,255,0.5)" stroke="none"/></svg>
-      <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);font-family:monospace">HERO VIDEO / REEL</span>
-      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:monospace">1920 × 1080 · MP4 or Vimeo</span>
-    </div>
-  </div>
+  <video
+    id="hero-video"
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster="/video/ims-sting-poster.jpg"
+    aria-label="IMS anagram brand sting"
+  >
+    <source src="/video/ims-sting-720.mp4" type="video/mp4" media="(max-width: 900px)">
+    <source src="/video/ims-sting.mp4" type="video/mp4">
+  </video>
   <style>#hero-video{display:block!important} @media(min-width:960px){.hero-inner{max-width:52%}} @media(max-width:959px){#hero-video{position:relative!important;width:100%!important;height:220px!important;top:auto!important;right:auto!important;bottom:auto!important;order:-1}}</style>
 <div class="hero-inner reveal">
     <!-- LOGO PLACEHOLDER — replace with confirmed SVG brand mark from John Harfield -->
