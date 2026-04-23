@@ -102,9 +102,9 @@ h2.sh.light em{color:#5BC8F0}
 
 /* PARTNERS */
 .partners-wrap{background:var(--white)}
-.partners-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border)}
+.partners-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}@media(max-width:900px){.partners-grid{grid-template-columns:1fr}}
 .partner-card{background:var(--white);padding:40px 36px;display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:start}
-.partner-badge{width:64px;height:64px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--white);letter-spacing:.1em;flex-shrink:0}
+.partner-badge{width:64px;height:64px;background:var(--white);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;padding:10px;flex-shrink:0;border-radius:6px}.partner-badge .partner-logo{width:100%;height:100%;display:block;overflow:visible}.partner-more{display:inline-block;margin-top:14px;font-size:12px;font-weight:500;color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(233,113,50,.35);padding-bottom:2px;letter-spacing:.01em}.partner-more:hover{border-bottom-color:var(--orange)}
 .partner-name{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px}
 .partner-body{font-size:13px;font-weight:300;color:var(--muted);line-height:1.7}
 .partner-owner{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-top:12px}
@@ -440,20 +440,30 @@ footer{background:var(--navy);padding:40px 8%;border-top:2px solid var(--orange)
   <div class="partners-grid">
 
     <div class="partner-card">
-      <div class="partner-badge">ADO</div>
+      <div class="partner-badge"><svg class="partner-logo" viewBox="0 0 240 212" xmlns="http://www.w3.org/2000/svg" aria-label="Adobe"><path fill="#FA0F00" d="M42.5 0H0v212zM197.4 0H240v212zM120 78.2L163.4 180h-28.3l-13-30.3H93.6L120 78.2z"/></svg></div>
       <div>
         <div class="partner-name">Adobe</div>
-        <div class="partner-body">We work with Adobe to design, implement, and optimise enterprise-grade digital experience solutions. Our teams support clients across data, customer experience, and marketing use cases — ensuring Adobe platforms are correctly architected, integrated, and aligned to business requirements. By leveraging Adobe's data, content, and experience platforms, we help organisations unify customer data, enable real-time insight, and activate personalised, cross-channel experiences.</div>
+        <div class="partner-body">We work with Adobe to design, implement, and optimise enterprise-grade digital experience solutions. Our teams support clients across data, customer experience, and marketing use cases — ensuring Adobe platforms are correctly architected, integrated, and aligned to business requirements. By leveraging Adobe&#8217;s data, content, and experience platforms, we help organisations unify customer data, enable real-time insight, and activate personalised, cross-channel experiences.</div>
+        <a class="partner-more" href="/adobe-private-capital">See our Adobe Private Capital Founding Partner programme &rarr;</a>
         <div class="partner-owner">Lead: Ian Daniels</div>
       </div>
     </div>
 
     <div class="partner-card">
-      <div class="partner-badge">MSF</div>
+      <div class="partner-badge"><svg class="partner-logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Microsoft"><rect x="2"  y="2"  width="28" height="28" fill="#F25022"/><rect x="34" y="2"  width="28" height="28" fill="#7FBA00"/><rect x="2"  y="34" width="28" height="28" fill="#00A4EF"/><rect x="34" y="34" width="28" height="28" fill="#FFB900"/></svg></div>
       <div>
         <div class="partner-name">Microsoft</div>
-        <div class="partner-body">We work with Microsoft to design, implement, and optimise data-driven and cloud-based solutions. Our teams support clients across data, analytics, AI, and digital transformation use cases — ensuring Microsoft platforms are securely architected, well integrated, and aligned to business and operational needs. By leveraging Microsoft's cloud, data, and productivity platforms, we help organisations create scalable data foundations, enable advanced analytics and automation.</div>
+        <div class="partner-body">We work with Microsoft to design, implement, and optimise data-driven and cloud-based solutions. Our teams support clients across data, analytics, AI, and digital transformation use cases — ensuring Microsoft platforms are securely architected, well integrated, and aligned to business and operational needs. By leveraging Microsoft&#8217;s cloud, data, and productivity platforms, we help organisations create scalable data foundations, enable advanced analytics and automation.</div>
         <div class="partner-owner">Lead: Pete</div>
+      </div>
+    </div>
+
+    <div class="partner-card">
+      <div class="partner-badge"><svg class="partner-logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Anthropic"><rect width="64" height="64" rx="10" fill="#F0EEE6"/><path fill="#CC785C" d="M32 10 L34.6 29.4 L54 32 L34.6 34.6 L32 54 L29.4 34.6 L10 32 L29.4 29.4 Z"/></svg></div>
+      <div>
+        <div class="partner-name">Anthropic</div>
+        <div class="partner-body">Anthropic partners with IMS on responsible AI deployment across enterprise marketing, customer experience, and operating-model programmes. We use Claude — Anthropic&#8217;s frontier assistant — to accelerate discovery, generative content, and delivery reviews, with human oversight and safety engineered in by design. Our Anthropic partnership underpins the Customer Experience Delivery Framework, ensuring AI accelerates delivery without compromising governance, brand integrity, or client trust.</div>
+        <div class="partner-owner">Lead: Ian Daniels</div>
       </div>
     </div>
 
