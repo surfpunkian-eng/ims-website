@@ -215,7 +215,7 @@ footer{background:var(--navy);padding:40px 8%;border-top:2px solid var(--orange)
     <source src="/video/ims-sting-720.mp4" type="video/mp4" media="(max-width: 900px)">
     <source src="/video/ims-sting.mp4" type="video/mp4">
   </video>
-  <style>#hero-video{display:block!important} @media(min-width:960px){.hero-inner{max-width:52%}} @media(max-width:959px){#hero-video{position:relative!important;width:100%!important;height:220px!important;top:auto!important;right:auto!important;bottom:auto!important;order:-1}}</style>
+  <style>#hero-video{display:block;position:absolute;top:0;bottom:0;right:0;width:38%;max-width:580px;min-width:340px;height:100%;object-fit:cover;object-position:center center;z-index:1;pointer-events:none;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 20%,#000 100%);mask-image:linear-gradient(to right,transparent 0%,#000 20%,#000 100%)}@media(min-width:960px){.hero-inner{max-width:52%}}@media(max-width:900px){.hero{padding-top:260px}#hero-video{position:absolute;top:0;left:0;right:0;bottom:auto;width:100%;max-width:none;min-width:0;height:220px;-webkit-mask-image:none;mask-image:none}}</style>
 <div class="hero-inner reveal">
     <!-- LOGO PLACEHOLDER — replace with confirmed SVG brand mark from John Harfield -->
     <div style="margin-bottom:28px;display:inline-flex;align-items:center;gap:14px">
