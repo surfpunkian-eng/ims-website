@@ -109,6 +109,14 @@ h2.sh.light em{color:#5BC8F0}
 .partner-body{font-size:13px;font-weight:300;color:var(--muted);line-height:1.7}
 .partner-owner{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-top:12px}
 
+/* APC CALLOUT */
+.apc-wrap{background:var(--navy)}
+.apc-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:80px;align-items:center}
+.apc-body{font-size:16px;font-weight:300;color:rgba(255,255,255,.72);line-height:1.7;max-width:600px}
+.apc-actions{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.apc-sub{font-size:12px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;max-width:320px}
+@media(max-width:900px){.apc-grid{grid-template-columns:1fr;gap:32px}}
+
 /* ABOUT */
 .about-wrap{background:var(--grey)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
@@ -184,6 +192,7 @@ footer{background:var(--navy);padding:40px 8%;border-top:2px solid var(--orange)
     <li><a href="#services">Services</a></li>
     <li><a href="#industries">Industries</a></li>
     <li><a href="#partners">Partners</a></li>
+    <li><a href="/adobe-private-capital">Adobe Private Capital</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact" class="nav-cta">Get in touch</a></li>
   </ul>
@@ -467,6 +476,21 @@ footer{background:var(--navy);padding:40px 8%;border-top:2px solid var(--orange)
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- AEM BLOCK: columns — apc-callout -->
+<section class="apc-wrap reveal" id="apc">
+  <div class="apc-grid">
+    <div class="apc-copy">
+      <p class="section-tag" style="color:var(--orange)">Founding Partner &middot; Adobe Private Capital</p>
+      <h2 class="sh light">A dedicated programme<br><em>for portfolio optimisation.</em></h2>
+      <p class="apc-body">IMS is the founding strategy partner for Adobe Private Capital &mdash; turning inherited Adobe stacks into portfolio-wide operating leverage for PE-backed organisations. Built on the Customer Experience Delivery Framework.</p>
+    </div>
+    <div class="apc-actions">
+      <a href="/adobe-private-capital" class="btn-p">See the programme &rarr;</a>
+      <p class="apc-sub">Ninety-day engagements, not nine-month transformations. Founding-cohort pricing through 2026.</p>
+    </div>
   </div>
 </section>
 
