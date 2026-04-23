@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Adobe Private Capital — Founding Partner · IMS</title>
+<meta name="description" content="IMS is the founding strategy partner for Adobe Private Capital. Turn inherited Adobe stacks into portfolio-wide operating leverage — in ninety days, not nine months." />
+<meta property="og:title" content="Adobe Private Capital · Founding Partner · IMS" />
+<meta property="og:description" content="Built on the Customer Experience Delivery Framework. The productised operating-model consultancy for PE-backed portfolio optimisation." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #FAF8F2;
+    --bg-dim: #F4F0E4;
+    --surface: #FFFFFF;
+    --navy: #0F2A3C;
+    --navy-soft: #1B3B52;
+    --teal: #16697A;
+    --sage: #82C0CC;
+    --cream: #F6EFD9;
+    --coral: #E07A5F;
+    --adobe-red: #EB1000;
+    --ink: #0B1319;
+    --text: #14181D;
+    --muted: #5A5A57;
+    --muted-2: #8B897E;
+    --hairline: #DDD7C6;
+    --hairline-strong: #BAB3A0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .serif { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .container.narrow { max-width: 880px; }
+
+  /* ============ TOP NAV ============ */
+  nav.top {
+    border-bottom: 1px solid var(--hairline);
+    background: rgba(250, 248, 242, 0.92);
+    backdrop-filter: blur(12px);
+    position: sticky; top: 0; z-index: 100;
+  }
+  nav.top .inner {
+    display: flex; align-items: center; padding: 16px 32px;
+    max-width: 1180px; margin: 0 auto;
+  }
+  .ims-mark {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 22px; font-weight: 400; letter-spacing: -0.01em;
+    color: var(--navy); text-decoration: none;
+  }
+  .ims-mark span { color: var(--coral); }
+  .breadcrumb {
+    margin-left: 28px; color: var(--muted); font-size: 13px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--navy); }
+  .breadcrumb .sep { color: var(--hairline-strong); }
+  .breadcrumb .current { color: var(--navy); font-weight: 500; }
+  nav.top .links { margin-left: auto; display: flex; gap: 28px; font-size: 14px; }
+  nav.top .links a { color: var(--text); text-decoration: none; font-weight: 500; }
+  nav.top .links a:hover { color: var(--coral); }
+  nav.top .cta {
+    background: var(--coral) !important; color: white !important; padding: 9px 18px;
+    border-radius: 999px; font-size: 13px; font-weight: 600;
+    text-decoration: none; margin-left: 8px;
+    box-shadow: 0 2px 8px rgba(224,122,95,0.35);
+    transition: all 0.15s ease;
+  }
+  nav.top .cta:hover { background: #C76546 !important; color: white !important; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(224,122,95,0.5); }
+
+  /* ============ HERO ============ */
+  .hero {
+    padding: 100px 0 120px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -20%; right: -10%;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(130,192,204,0.15), transparent 70%);
+    z-index: 0; pointer-events: none;
+  }
+  .hero .inner {
+    display: grid; grid-template-columns: 1fr 340px; gap: 72px;
+    align-items: center; position: relative; z-index: 1;
+  }
+  .eyebrow {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--coral); font-weight: 600; margin-bottom: 28px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .eyebrow::before {
+    content: ''; width: 32px; height: 1px; background: var(--coral);
+  }
+  h1 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 68px; line-height: 1.02; font-weight: 400;
+    color: var(--navy); letter-spacing: -0.02em;
+    margin-bottom: 28px; max-width: 680px;
+  }
+  h1 em { font-style: italic; color: var(--coral); }
+  .hero .sub {
+    font-size: 19px; line-height: 1.55; color: var(--text);
+    max-width: 540px; margin-bottom: 40px; font-weight: 400;
+  }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 24px; border-radius: 999px;
+    font-size: 15px; font-weight: 500; text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .btn-primary { background: var(--coral); color: white; box-shadow: 0 4px 14px rgba(224,122,95,0.35); font-weight: 600; }
+  .btn-primary:hover { background: #C76546; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(224,122,95,0.5); }
+  .btn-secondary { background: transparent; color: var(--navy); border: 1px solid var(--hairline-strong); }
+  .btn-secondary:hover { border-color: var(--navy); }
+  .btn .arrow { transition: transform 0.15s; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ============ FOUNDING PARTNER BADGE ============ */
+  .badge-frame {
+    display: flex; justify-content: center; align-items: center;
+    position: relative;
+  }
+  .badge-svg {
+    width: 300px; height: 300px;
+    filter: drop-shadow(0 20px 40px rgba(15,42,60,0.15));
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* ============ CEDF BAND ============ */
+  .cedf-band {
+    background: var(--navy);
+    color: white;
+    padding: 72px 0;
+    position: relative;
+  }
+  .cedf-band .inner {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px;
+    align-items: start;
+  }
+  .cedf-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em;
+    color: var(--sage); font-weight: 600; margin-bottom: 16px;
+  }
+  .cedf-band h2 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 38px; line-height: 1.1; font-weight: 400;
+    color: white; letter-spacing: -0.015em;
+  }
+  .cedf-band p {
+    font-size: 17px; line-height: 1.65; color: rgba(255,255,255,0.78);
+    margin-bottom: 16px;
+  }
+  .cedf-clients {
+    margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .client-pill {
+    padding: 6px 14px; border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 999px; font-size: 13px; color: rgba(255,255,255,0.9);
+    font-weight: 500;
+  }
+
+  /* ============ OLLIE TESTIMONIAL ============ */
+  .testimonial {
+    padding: 120px 0;
+    background: var(--cream);
+  }
+  .testimonial .inner {
+    max-width: 880px; margin: 0 auto; padding: 0 32px;
+    text-align: center;
+  }
+  .quote-mark {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 140px; line-height: 0.8; color: var(--coral);
+    margin-bottom: 16px;
+  }
+  blockquote {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 38px; line-height: 1.25; font-weight: 400;
+    color: var(--navy); letter-spacing: -0.015em;
+    font-style: italic;
+  }
+  blockquote em { font-style: normal; }
+  .attribution {
+    margin-top: 40px; display: flex; justify-content: center; align-items: center;
+    gap: 16px;
+  }
+  .attribution .avatar {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy), var(--teal));
+    color: white; display: grid; place-items: center;
+    font-family: 'Instrument Serif', serif; font-size: 22px;
+  }
+  .attribution .person { text-align: left; }
+  .attribution .name { font-weight: 600; color: var(--navy); font-size: 15px; }
+  .attribution .role { color: var(--muted); font-size: 13.5px; margin-top: 2px; }
+  .draft-flag {
+    margin-top: 32px; display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px; background: rgba(224,122,95,0.1); border-radius: 999px;
+    font-size: 12px; color: var(--coral); font-weight: 500;
+  }
+  .draft-flag .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--coral); }
+
+  /* ============ WHAT WE DELIVER ============ */
+  .deliver {
+    padding: 120px 0 100px;
+  }
+  .section-head {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 60px; gap: 40px;
+  }
+  .section-head .left { flex: 1; }
+  .section-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--coral); font-weight: 600; margin-bottom: 16px;
+  }
+  h2.section-title {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 48px; line-height: 1.08; font-weight: 400;
+    color: var(--navy); letter-spacing: -0.02em;
+    max-width: 640px;
+  }
+  .section-head .right {
+    max-width: 320px; color: var(--muted); font-size: 15px; line-height: 1.6;
+    padding-bottom: 6px;
+  }
+  .deliver-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .deliver-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 32px 28px;
+    position: relative; overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  .deliver-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(15,42,60,0.08); }
+  .deliver-card .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 48px; color: var(--coral); line-height: 1;
+    margin-bottom: 20px;
+  }
+  .deliver-card h3 {
+    font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .deliver-card p { color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+  .deliver-card .meta {
+    margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--hairline);
+    font-size: 12.5px; color: var(--muted-2);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ============ CASE STUDY ============ */
+  .case {
+    padding: 0 0 120px;
+  }
+  .case .inner {
+    background: var(--navy);
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid; grid-template-columns: 1fr 1fr;
+    min-height: 520px;
+  }
+  .case .copy {
+    padding: 64px 56px; color: white;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .case .eyebrow { color: var(--sage); }
+  .case .eyebrow::before { background: var(--sage); }
+  .case h3 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 40px; line-height: 1.1; font-weight: 400;
+    color: white; letter-spacing: -0.02em; margin-bottom: 20px;
+  }
+  .case p { color: rgba(255,255,255,0.78); font-size: 16px; line-height: 1.65; margin-bottom: 14px; }
+  .case .stats {
+    margin: 32px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.15); border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .case .stat .v {
+    font-family: 'Instrument Serif', serif; font-size: 36px; color: var(--sage);
+    line-height: 1; margin-bottom: 6px;
+  }
+  .case .stat .k { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.6); font-weight: 500; }
+  .case .cta-row { margin-top: 24px; }
+  .case .btn-primary { background: var(--coral); color: white; }
+  .case .btn-primary:hover { background: #C76546; }
+  .case .btn-secondary { border-color: rgba(255,255,255,0.25); color: white; }
+  .case .btn-secondary:hover { border-color: white; }
+  .case .visual {
+    background: linear-gradient(135deg, #0F2A3C 0%, #16697A 100%);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .case .visual::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 30% 20%, rgba(130,192,204,0.2), transparent 40%),
+      radial-gradient(circle at 70% 80%, rgba(224,122,95,0.15), transparent 40%);
+  }
+  .browser-mock {
+    width: 85%; max-width: 440px; background: white; border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden; position: relative;
+  }
+  .browser-bar {
+    background: #F4F0E4; padding: 10px 14px;
+    display: flex; align-items: center; gap: 6px; border-bottom: 1px solid var(--hairline);
+  }
+  .browser-bar .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--hairline-strong); }
+  .browser-bar .url {
+    flex: 1; background: white; padding: 5px 12px; border-radius: 5px;
+    font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+    color: var(--muted); margin-left: 8px;
+  }
+  .browser-content {
+    padding: 22px 24px; min-height: 240px;
+    background: white;
+  }
+  .bc-row { height: 9px; background: var(--bg-dim); border-radius: 3px; margin-bottom: 8px; }
+  .bc-row.w70 { width: 70%; }
+  .bc-row.w40 { width: 40%; }
+  .bc-row.w55 { width: 55%; }
+  .bc-panel {
+    margin-top: 14px; padding: 14px 16px; border-radius: 8px;
+    background: linear-gradient(135deg, #F6EFD9, #F4F0E4);
+    border: 1px solid var(--hairline);
+  }
+  .bc-panel .h { font-size: 11px; color: var(--coral); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+  .bc-panel .line { font-size: 12px; color: var(--navy); font-weight: 600; line-height: 1.3; }
+  .bc-btn {
+    margin-top: 10px; display: inline-block; padding: 6px 12px;
+    background: var(--coral); color: white; border-radius: 5px;
+    font-size: 10.5px; font-weight: 500;
+  }
+
+  /* ============ ENGINE PREVIEW ============ */
+  .engine {
+    padding: 0 0 120px;
+  }
+  .engine .inner {
+    display: grid; grid-template-columns: 420px 1fr; gap: 80px;
+    align-items: center;
+  }
+  .engine .copy .section-label { color: var(--teal); }
+  .engine h2 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 40px; line-height: 1.1; font-weight: 400;
+    color: var(--navy); letter-spacing: -0.02em; margin-bottom: 20px;
+  }
+  .engine p { color: var(--muted); font-size: 16px; line-height: 1.65; margin-bottom: 14px; }
+  .engine .link {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 20px; color: var(--teal); font-weight: 500; font-size: 14.5px;
+    text-decoration: none; padding-bottom: 3px; border-bottom: 1px solid var(--teal);
+  }
+  .engine .preview {
+    background: white; border-radius: 12px;
+    border: 1px solid var(--hairline); overflow: hidden;
+    box-shadow: 0 20px 60px rgba(15,42,60,0.08);
+    position: relative;
+  }
+  .engine .preview img { width: 100%; display: block; }
+  .engine .preview .mock-ui {
+    display: grid; grid-template-columns: 180px 1fr 200px; min-height: 320px;
+  }
+  .engine .preview .sidebar { background: #FBFAF6; border-right: 1px solid var(--hairline); padding: 14px 12px; }
+  .engine .preview .sidebar .lbl { font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted-2); font-weight: 600; margin: 6px 0 6px; }
+  .engine .preview .sidebar .item { padding: 6px 8px; font-size: 11.5px; color: var(--text); border-radius: 4px; margin-bottom: 2px; }
+  .engine .preview .sidebar .item.active { background: white; font-weight: 600; border-left: 2px solid var(--teal); }
+  .engine .preview .main-area { padding: 18px; }
+  .engine .preview .client-head { display: flex; gap: 10px; margin-bottom: 14px; align-items: center; }
+  .engine .preview .client-head .logo { width: 32px; height: 32px; border-radius: 6px; background: linear-gradient(135deg, var(--navy), var(--teal)); color: white; display: grid; place-items: center; font-weight: 700; font-size: 11px; }
+  .engine .preview .client-head .t { font-size: 14px; font-weight: 600; color: var(--navy); }
+  .engine .preview .client-head .s { font-size: 10px; color: var(--muted); }
+  .engine .preview .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--hairline); margin-bottom: 12px; }
+  .engine .preview .tab { font-size: 10.5px; padding: 6px 10px; color: var(--muted); border-bottom: 2px solid transparent; }
+  .engine .preview .tab.active { color: var(--navy); border-bottom-color: var(--navy); font-weight: 600; }
+  .engine .preview .form-row { display: grid; grid-template-columns: 100px 1fr; padding: 5px 0; font-size: 10.5px; border-bottom: 1px dashed var(--hairline); }
+  .engine .preview .form-row .l { color: var(--muted); }
+  .engine .preview .form-row .v { color: var(--text); }
+  .engine .preview .right-panel { background: #FBFAF6; border-left: 1px solid var(--hairline); padding: 14px 12px; font-size: 10.5px; }
+  .engine .preview .right-panel .k { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted-2); font-weight: 600; margin-bottom: 6px; }
+  .engine .preview .status-row { display: flex; align-items: center; gap: 6px; padding: 4px 0; font-size: 10px; }
+  .engine .preview .status-row .sd { width: 6px; height: 6px; border-radius: 50%; background: #4CAF7A; }
+
+  /* ============ PARTNERSHIP ARCHITECTURE ============ */
+  .partnership {
+    padding: 100px 0;
+    background: var(--bg-dim);
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .partnership .inner { text-align: center; }
+  .partnership h2 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 36px; line-height: 1.15; font-weight: 400;
+    color: var(--navy); letter-spacing: -0.02em;
+    margin-bottom: 20px; max-width: 720px; margin-left: auto; margin-right: auto;
+  }
+  .partnership .lede {
+    color: var(--muted); font-size: 16px; line-height: 1.65;
+    max-width: 640px; margin: 0 auto 56px;
+  }
+  .partners-row {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    max-width: 900px; margin: 0 auto;
+  }
+  .partner-card {
+    background: white; border: 1px solid var(--hairline); border-radius: 12px;
+    padding: 28px 20px; text-align: center;
+  }
+  .partner-card .logo {
+    font-family: 'Instrument Serif', serif; font-size: 26px; font-weight: 400;
+    color: var(--navy); margin-bottom: 14px; letter-spacing: -0.01em;
+  }
+  .partner-card .logo .accent { color: var(--coral); }
+  .partner-card .role {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--coral); font-weight: 600; margin-bottom: 10px;
+  }
+  .partner-card .detail { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .partner-card.lead { background: var(--navy); color: white; border-color: var(--navy); }
+  .partner-card.lead .logo { color: white; }
+  .partner-card.lead .logo .accent { color: var(--coral); }
+  .partner-card.lead .role { color: var(--sage); }
+  .partner-card.lead .detail { color: rgba(255,255,255,0.78); }
+
+  /* ============ QUALIFIER ============ */
+  .qualifier {
+    padding: 120px 0;
+  }
+  .qualifier .inner {
+    display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: start;
+  }
+  .qualifier h2 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 44px; line-height: 1.08; font-weight: 400;
+    color: var(--navy); letter-spacing: -0.02em; margin-bottom: 20px;
+  }
+  .qualifier .copy p { color: var(--muted); font-size: 16px; line-height: 1.65; margin-bottom: 14px; }
+  .qualifier .copy ul {
+    list-style: none; margin-top: 24px;
+  }
+  .qualifier .copy ul li {
+    padding: 10px 0 10px 28px; position: relative;
+    color: var(--text); font-size: 15px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .qualifier .copy ul li::before {
+    content: ''; position: absolute; left: 0; top: 17px;
+    width: 14px; height: 1px; background: var(--coral);
+  }
+  form.qualifier-form {
+    background: white; border: 1px solid var(--hairline);
+    border-radius: 16px; padding: 32px;
+    box-shadow: 0 10px 40px rgba(15,42,60,0.06);
+  }
+  .field-group { margin-bottom: 20px; }
+  .field-group label {
+    display: block; font-size: 12.5px; font-weight: 600;
+    color: var(--navy); margin-bottom: 8px;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .field-group input, .field-group select, .field-group textarea {
+    width: 100%; padding: 11px 14px; border: 1px solid var(--hairline);
+    border-radius: 8px; font-family: inherit; font-size: 14.5px;
+    color: var(--text); background: var(--bg);
+    transition: border-color 0.15s;
+  }
+  .field-group input:focus, .field-group select:focus, .field-group textarea:focus {
+    outline: none; border-color: var(--navy);
+  }
+  form.qualifier-form .submit-row {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 24px; gap: 16px;
+  }
+  form.qualifier-form button {
+    background: var(--coral); color: white; border: none;
+    padding: 14px 24px; border-radius: 999px; font-size: 15px;
+    font-weight: 600; cursor: pointer; font-family: inherit;
+    display: inline-flex; align-items: center; gap: 10px;
+    box-shadow: 0 4px 14px rgba(224,122,95,0.35);
+    transition: all 0.15s ease;
+  }
+  form.qualifier-form button:hover { background: #C76546; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(224,122,95,0.5); }
+  form.qualifier-form .micro {
+    font-size: 11.5px; color: var(--muted-2); line-height: 1.5;
+  }
+
+  /* ============ TEAM ============ */
+  .team {
+    padding: 100px 0;
+    background: var(--navy);
+    color: white;
+  }
+  .team .inner { text-align: center; }
+  .team .section-label { color: var(--sage); }
+  .team h2 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 36px; line-height: 1.1; font-weight: 400;
+    color: white; letter-spacing: -0.02em;
+    margin-bottom: 50px; max-width: 720px; margin-left: auto; margin-right: auto;
+  }
+  .team-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+    max-width: 900px; margin: 0 auto;
+  }
+  .team-person {
+    text-align: center;
+  }
+  .team-person .avatar {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal), var(--sage));
+    color: white; display: grid; place-items: center;
+    font-family: 'Instrument Serif', serif; font-size: 26px;
+    margin: 0 auto 16px;
+  }
+  .team-person .name { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+  .team-person .role { color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.4; }
+
+  /* ============ FOOTER ============ */
+  footer {
+    padding: 56px 0 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    background: var(--navy);
+    color: rgba(255,255,255,0.65);
+    font-size: 13px;
+  }
+  footer .inner {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 24px; flex-wrap: wrap;
+  }
+  footer .brand { color: white; font-family: 'Instrument Serif', serif; font-size: 18px; }
+  footer .brand .accent { color: var(--coral); }
+  footer .legal { font-size: 12px; color: rgba(255,255,255,0.4); }
+  footer .beacon { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--sage); }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 960px) {
+    .hero .inner, .cedf-band .inner, .case .inner, .engine .inner, .qualifier .inner {
+      grid-template-columns: 1fr; gap: 48px;
+    }
+    .badge-svg { width: 240px; height: 240px; }
+    h1 { font-size: 48px; }
+    h2.section-title, .cedf-band h2, .case h3, .engine h2, .qualifier h2 { font-size: 32px; }
+    blockquote { font-size: 26px; }
+    .deliver-grid, .partners-row, .team-grid { grid-template-columns: 1fr 1fr; }
+    .section-head { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 640px) {
+    nav.top .links { display: none; }
+    .breadcrumb { display: none; }
+    .deliver-grid, .partners-row, .team-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 38px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= TOP NAV ================= -->
+<nav class="top">
+  <div class="inner">
+    <a href="#" class="ims-mark">IMS<span>.</span></a>
+    <div class="breadcrumb">
+      <a href="#">Partners</a>
+      <span class="sep">/</span>
+      <span class="current">Adobe Private Capital</span>
+    </div>
+    <div class="links">
+      <a href="#cedf">CEDF</a>
+      <a href="#case">Case study</a>
+      <a href="#engine">The engine</a>
+      <a href="#contact" class="cta">Request a call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container inner">
+
+    <div class="hero-copy">
+      <div class="eyebrow">Adobe Private Capital · Founding Partner</div>
+      <h1>Turn inherited Adobe stacks into <em>portfolio-wide operating leverage.</em></h1>
+      <p class="sub">
+        IMS is the founding strategy partner for Adobe Private Capital. We help private-equity operating partners and their portfolio CxOs move from inherited technology to measurable customer-experience outcomes — in ninety days, not nine months.
+      </p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-primary">Request a discovery call <span class="arrow">→</span></a>
+        <a href="#case" class="btn btn-secondary">See the VetPartners walk-through</a>
+      </div>
+    </div>
+
+    <!-- ================= FOUNDING PARTNER BADGE ================= -->
+    <div class="badge-frame">
+      <svg class="badge-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Adobe Private Capital — Founding Partner 2026">
+        <defs>
+          <radialGradient id="bg-grad" cx="50%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="#1B3B52" />
+            <stop offset="100%" stop-color="#0F2A3C" />
+          </radialGradient>
+          <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#E07A5F" />
+            <stop offset="100%" stop-color="#EB1000" />
+          </linearGradient>
+          <path id="circle-top" d="M 60,150 A 90,90 0 0,1 240,150" fill="none" />
+          <path id="circle-bot" d="M 60,150 A 90,90 0 0,0 240,150" fill="none" />
+        </defs>
+
+        <!-- Outer ring -->
+        <circle cx="150" cy="150" r="140" fill="url(#bg-grad)" />
+        <circle cx="150" cy="150" r="140" fill="none" stroke="#E07A5F" stroke-width="1" opacity="0.4" />
+        <circle cx="150" cy="150" r="128" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.2" />
+
+        <!-- Top curved text -->
+        <text font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#82C0CC">
+          <textPath href="#circle-top" startOffset="50%" text-anchor="middle">ADOBE · PRIVATE · CAPITAL</textPath>
+        </text>
+
+        <!-- Bottom curved text -->
+        <text font-family="Inter, sans-serif" font-size="11" font-weight="500" letter-spacing="4" fill="#82C0CC" opacity="0.85">
+          <textPath href="#circle-bot" startOffset="50%" text-anchor="middle">EST. MMXXVI</textPath>
+        </text>
+
+        <!-- Inner decorative ring -->
+        <circle cx="150" cy="150" r="96" fill="none" stroke="url(#accent-grad)" stroke-width="1.5" />
+        <circle cx="150" cy="150" r="96" fill="none" stroke="#0F2A3C" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.5" />
+
+        <!-- Center nucleus mark -->
+        <g transform="translate(150,150)">
+          <!-- 5-petal / hex abstract for "mycelium" nucleus -->
+          <circle r="38" fill="#0B1319" />
+          <g stroke="#E07A5F" stroke-width="1.5" fill="none">
+            <circle r="22" />
+            <line x1="-22" y1="0" x2="22" y2="0" />
+            <line x1="-11" y1="-19" x2="11" y2="19" />
+            <line x1="11" y1="-19" x2="-11" y2="19" />
+          </g>
+          <circle r="5" fill="#E07A5F" />
+        </g>
+
+        <!-- FOUNDING -->
+        <text x="150" y="232" text-anchor="middle" font-family="Instrument Serif, serif" font-size="24" fill="#FFFFFF" font-style="italic">Founding</text>
+        <!-- PARTNER -->
+        <text x="150" y="258" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="13" letter-spacing="6" fill="#E07A5F">PARTNER</text>
+
+        <!-- IMS mark -->
+        <text x="150" y="100" text-anchor="middle" font-family="Instrument Serif, serif" font-weight="400" font-size="18" fill="#FFFFFF">IMS<tspan fill="#E07A5F">.</tspan></text>
+
+        <!-- Small tick marks on outer ring -->
+        <g stroke="#82C0CC" stroke-width="1" opacity="0.7">
+          <line x1="150" y1="10" x2="150" y2="18" />
+          <line x1="150" y1="282" x2="150" y2="290" />
+          <line x1="10" y1="150" x2="18" y2="150" />
+          <line x1="282" y1="150" x2="290" y2="150" />
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CEDF BAND ================= -->
+<section class="cedf-band" id="cedf">
+  <div class="container inner">
+    <div>
+      <div class="cedf-label">The Framework</div>
+      <h2>Built on the Customer Experience Delivery Framework.</h2>
+    </div>
+    <div>
+      <p>
+        The CEDF is how IMS has talked about end-to-end customer experience for over a decade. It's deliberately people- and technology-agnostic — the orientation pattern that lets operating partners and CxOs discuss transformation without getting trapped in vendor debates or org-chart politics.
+      </p>
+      <p>
+        Adobe Private Capital is the first co-branded delivery engine to sit inside the CEDF. It keeps the framework's agnosticism at the strategy layer while giving portfolio companies a concrete, Adobe-powered execution path for the specific work that creates value inside a PE hold: accelerating customer-experience ROI, de-risking inherited stacks, and producing the board-ready evidence of operating leverage.
+      </p>
+      <div class="cedf-clients">
+        <span class="client-pill">Amazon</span>
+        <span class="client-pill">Eli Lilly</span>
+        <span class="client-pill">Admiral</span>
+        <span class="client-pill">CVS</span>
+        <span class="client-pill">Clearcourse</span>
+        <span class="client-pill">+ portfolio clients under NDA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OLLIE TESTIMONIAL ================= -->
+<section class="testimonial">
+  <div class="inner">
+    <div class="quote-mark">"</div>
+    <blockquote>
+      The CEDF was already the clearest operating model I'd seen for transformation work inside a private-capital portfolio. Combining it with Adobe's stack, delivered by IMS, turns a two-quarter consulting exercise into a two-week <em>walk-through</em>. That changes the economics of portfolio optimisation.
+    </blockquote>
+    <div class="attribution">
+      <div class="avatar">OC</div>
+      <div class="person">
+        <div class="name">Olli Coupe</div>
+        <div class="role">Global Managing Director · Adobe Private Capital</div>
+      </div>
+    </div>
+    <div class="draft-flag">
+      <span class="dot"></span>
+      Draft for Olli's approval — quote and attribution editable
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT WE DELIVER ================= -->
+<section class="deliver container">
+  <div class="section-head">
+    <div class="left">
+      <div class="section-label">What a portfolio company gets</div>
+      <h2 class="section-title">From one discovery call to a client-ready storyboard in five working days.</h2>
+    </div>
+    <div class="right">
+      A compressed consulting engagement that produces the artefact a board needs before green-lighting transformation work: a walk-through of the future state, in the portfolio company's own language, with the unit economics worked out.
+    </div>
+  </div>
+
+  <div class="deliver-grid">
+    <div class="deliver-card">
+      <div class="num">01</div>
+      <h3>Discover</h3>
+      <p>A single structured call with the portfolio CxO and APC consultant. Thirty fields captured against the CEDF. No shared drives, no kickoff deck, no six-week discovery phase.</p>
+      <div class="meta">~ 60 minutes</div>
+    </div>
+    <div class="deliver-card">
+      <div class="num">02</div>
+      <h3>Storyboard</h3>
+      <p>Client-branded walk-through: persona, friction moment, Adobe capability applied, LTV math, objection handling, nurture path. Delivered web-first, with a takeaway MP4 and a speaker script.</p>
+      <div class="meta">~ 5 working days</div>
+    </div>
+    <div class="deliver-card">
+      <div class="num">03</div>
+      <h3>Commit</h3>
+      <p>A board-ready one-page commitment: what ships in ninety days, what proves out in the first quarter, and which KPIs travel back to the PE firm's internal reporting. Instrumented with Adobe Analytics from day one.</p>
+      <div class="meta">Q1 operating plan</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CASE STUDY ================= -->
+<section class="case container" id="case">
+  <div class="inner">
+    <div class="copy">
+      <div class="eyebrow">Exhibit A · VetPartners UK</div>
+      <h3>£14,400 of LTV hiding inside every one-time kibble purchase.</h3>
+      <p>
+        VetPartners UK — a Summit Partners portfolio company with 450+ clinics — inherited Adobe Commerce, AEM, and a Real-Time CDP pilot from a prior leadership team. The operating partners at Summit needed to defend the stack to their board and unlock the subscription economics the platform was built for.
+      </p>
+      <p>
+        In one week we storyboarded the single highest-value intercept in their purchase flow: a Subscribe &amp; Save moment at the basket, powered by Commerce cart price rules and a CDP eligibility audience, with a forty-five-day nurture into Healthy Pet Club insurance.
+      </p>
+      <div class="stats">
+        <div class="stat"><div class="v">~20%</div><div class="k">Incremental LTV target</div></div>
+        <div class="stat"><div class="v">5 days</div><div class="k">Storyboard to client-ready</div></div>
+        <div class="stat"><div class="v">£14,400</div><div class="k">LTV per enrolled household</div></div>
+        <div class="stat"><div class="v">12 slides</div><div class="k">+ voice-over + MP4</div></div>
+      </div>
+      <div class="cta-row">
+        <a href="#" class="btn btn-primary">Walk the Summit journey <span class="arrow">→</span></a>
+        <a href="#" class="btn btn-secondary">Download the case PDF</a>
+      </div>
+    </div>
+
+    <div class="visual">
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+          <div class="url">journey-showcase.vercel.app/vetpartners/checkout</div>
+        </div>
+        <div class="browser-content">
+          <div class="bc-row w70"></div>
+          <div class="bc-row w40"></div>
+          <div class="bc-row w55"></div>
+          <div class="bc-panel">
+            <div class="h">The moment</div>
+            <div class="line">Subscribe &amp; save 15% on every bag — plus free delivery. Skip or cancel anytime.</div>
+            <span class="bc-btn">Switch to Subscribe &amp; Save</span>
+          </div>
+          <div class="bc-row w70" style="margin-top: 16px;"></div>
+          <div class="bc-row w40"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENGINE PREVIEW ================= -->
+<section class="engine container" id="engine">
+  <div class="inner">
+    <div class="copy">
+      <div class="section-label">The engine</div>
+      <h2>The consultant-facing tool behind the compression.</h2>
+      <p>
+        Phase two of the partnership productises the manual run. Discovery inputs against the CEDF, brand tokens scraped from the client URL, template-driven storyboard generation, automated voice-over, one-click preview. Target: ninety minutes from call to client-ready.
+      </p>
+      <p>
+        Adobe BU and IMS co-invest in the build; Anthropic provides the generation layer; Microsoft stays foundational. The tool ships to APC consultants first, then to named champions inside portfolio companies in a self-service mode.
+      </p>
+      <a class="link" href="#">See the v0.1 consultant view <span>→</span></a>
+    </div>
+
+    <div class="preview">
+      <div class="mock-ui">
+        <div class="sidebar">
+          <div class="lbl">Summit portfolio</div>
+          <div class="item active">VetPartners UK</div>
+          <div class="item">Copperleaf Cap.</div>
+          <div class="item">Harlow Diag.</div>
+          <div class="item">Northern Forge</div>
+          <div class="lbl" style="margin-top: 18px;">Templates</div>
+          <div class="item">Checkout optim.</div>
+          <div class="item">Booking journey</div>
+          <div class="item">B2B renewal</div>
+        </div>
+        <div class="main-area">
+          <div class="client-head">
+            <div class="logo">VP</div>
+            <div>
+              <div class="t">VetPartners UK</div>
+              <div class="s">Summit Partners · veterinary consumer health</div>
+            </div>
+          </div>
+          <div class="tabs">
+            <div class="tab active">Discovery</div>
+            <div class="tab">Storyboard</div>
+            <div class="tab">Assets</div>
+            <div class="tab">Handover</div>
+          </div>
+          <div class="form-row"><div class="l">Client URL</div><div class="v">vetpartners.co.uk</div></div>
+          <div class="form-row"><div class="l">Journey</div><div class="v">Checkout optimisation</div></div>
+          <div class="form-row"><div class="l">Persona</div><div class="v">Sarah, 38, Lab owner</div></div>
+          <div class="form-row"><div class="l">Friction</div><div class="v">Basket pre-checkout</div></div>
+          <div class="form-row"><div class="l">Capability</div><div class="v">Cart price rules + RT-CDP</div></div>
+          <div class="form-row"><div class="l">Target lift</div><div class="v">~20% LTV</div></div>
+        </div>
+        <div class="right-panel">
+          <div class="k">Generation</div>
+          <div class="status-row"><span class="sd"></span>Discovery validated</div>
+          <div class="status-row"><span class="sd"></span>Brand tokens scraped</div>
+          <div class="status-row"><span class="sd"></span>Storyboard · 12 slides</div>
+          <div class="status-row"><span class="sd"></span>ElevenLabs clips</div>
+          <div class="status-row"><span class="sd"></span>Web walk-through live</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNERSHIP ARCHITECTURE ================= -->
+<section class="partnership">
+  <div class="container inner">
+    <div class="section-label" style="color: var(--coral);">Partnership architecture</div>
+    <h2>Additive, not displacive. Four partners, one operating model.</h2>
+    <p class="lede">
+      IMS leads the consultancy. Adobe supplies the product context and co-sell motion. Anthropic provides the generation layer. Microsoft stays foundational. No partner is asked to cede ground; each gains a proof point it could not produce alone.
+    </p>
+
+    <div class="partners-row">
+      <div class="partner-card lead">
+        <div class="logo">IMS<span class="accent">.</span></div>
+        <div class="role">Strategy lead</div>
+        <div class="detail">CEDF owner · APC engagement delivery</div>
+      </div>
+      <div class="partner-card">
+        <div class="logo" style="color: var(--adobe-red);">Adobe</div>
+        <div class="role">Product partner</div>
+        <div class="detail">Commerce, CDP, AEM, Analytics · co-sell motion</div>
+      </div>
+      <div class="partner-card">
+        <div class="logo">Anthropic</div>
+        <div class="role">Generation layer</div>
+        <div class="detail">Claude-orchestrated pipeline · per-client generation</div>
+      </div>
+      <div class="partner-card">
+        <div class="logo" style="color: #0072CE;">Microsoft</div>
+        <div class="role">Foundational</div>
+        <div class="detail">Hosting, identity, productivity · existing AI partnership</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUALIFIER / LEAD ================= -->
+<section class="qualifier container" id="contact">
+  <div class="inner">
+    <div class="copy">
+      <div class="section-label">Request a call</div>
+      <h2>Are we a fit for your portfolio?</h2>
+      <p>
+        The APC programme is designed for private-equity operating partners and portfolio-company CxOs with an existing or planned Adobe product footprint. Tell us a little about your portfolio and we'll route you to the right engagement lead within one working day.
+      </p>
+      <ul>
+        <li>Thirty-minute introductory call — no pitch</li>
+        <li>Indicative engagement shape within a week</li>
+        <li>Case-study participation available for founding-run portfolios</li>
+      </ul>
+    </div>
+
+    <form class="qualifier-form" onsubmit="event.preventDefault(); alert('Mock form — in production, routes to Connor & Andrew.');">
+      <div class="field-group">
+        <label for="firm">Which PE firm?</label>
+        <input type="text" id="firm" placeholder="e.g. Summit Partners" />
+      </div>
+      <div class="field-group">
+        <label for="portfolio">Portfolio companies in scope</label>
+        <select id="portfolio">
+          <option>Select one…</option>
+          <option>1 portfolio company</option>
+          <option>2–4 portfolio companies</option>
+          <option>5–10 portfolio companies</option>
+          <option>10+ / whole portfolio</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label for="stack">Current Adobe footprint</label>
+        <select id="stack">
+          <option>Select one…</option>
+          <option>None — we're evaluating</option>
+          <option>Licensed but not deployed</option>
+          <option>Partial deployment (1–2 products)</option>
+          <option>Full stack deployment</option>
+          <option>Mixed across portfolio</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label for="email">Work email</label>
+        <input type="email" id="email" placeholder="you@firm.com" />
+      </div>
+
+      <div class="submit-row">
+        <div class="micro">
+          Your response routes directly to<br/>
+          <strong>Connor Murphy</strong> &amp; <strong>Andrew Berryman</strong>.
+        </div>
+        <button type="submit">Book call <span>→</span></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="team">
+  <div class="container inner">
+    <div class="section-label">Delivery team</div>
+    <h2>The people who run it.</h2>
+    <div class="team-grid">
+      <div class="team-person">
+        <div class="avatar">MK</div>
+        <div class="name">Mike Keating</div>
+        <div class="role">CEDF co-author · operating model</div>
+      </div>
+      <div class="team-person">
+        <div class="avatar">ID</div>
+        <div class="name">Ian Daniels</div>
+        <div class="role">IMS · APC Programme</div>
+      </div>
+      <div class="team-person">
+        <div class="avatar">CM</div>
+        <div class="name">Connor Murphy</div>
+        <div class="role">APC Programme Liaison</div>
+      </div>
+      <div class="team-person">
+        <div class="avatar">AB</div>
+        <div class="name">Andrew Berryman</div>
+        <div class="role">Head of Adobe Private Capital, EMEA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container inner">
+    <div class="brand">IMS<span class="accent">.</span> &nbsp; × &nbsp; Adobe Private Capital</div>
+    <div class="beacon">// adobe analytics beacon · apc-landing-v0.1</div>
+    <div class="legal">© 2026 IMS. Adobe and the Adobe logo are trademarks of Adobe Inc. Used with permission.</div>
+  </div>
+</footer>
+
+</body>
+</html>
